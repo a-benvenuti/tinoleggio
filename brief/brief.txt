@@ -1,0 +1,207 @@
+CONSEGNA:
+- rifacimento pagina proposizione offerte usando un framework javascript
+- riscivere stili css per box singola offerta
+
+
+
+JSON CORRISPONDENTE:
+"article":
+	{
+	  "id":null,
+	  "name":"Fiat 500",
+	  "description":"",
+	  "external_code":"716ed0a5-a4a6-4a60-9518-79c56d4972b7",
+	  "acris":"EBMR",
+	  "subcategory_id":1,
+	  "features":[
+		 {
+		  "name":"feature.aircon",
+		  "value":"common.feature.values.true",
+		  "class":"glyphicons snowflake"
+		 },
+		 {
+		  "name":"feature.transmission",
+		  "value":"common.feature.values.gear.manual",
+		  "class":"tino_font icon-gear"
+		 },
+		 {
+		  "name":"feature.doors",
+		  "value":"3",
+		  "class":"tino_font icon-door"
+		 },
+		 {
+		  "name":"feature.seats",
+		  "value":"4",
+		  "class":"tino_font icon-seat"
+		 },
+		 {
+		  "name":"feature.fuel",
+		  "value":"petrol",
+		  "class":"tino_font icon-gasoline"
+		 }
+	 ],
+	 "images":[
+	        "https:\/\/cdn-partner.tinoleggio.it\/vehicles\/85\/fbb5ef28115e7f464d12720cf1451029.jpeg"
+	 ]
+       },
+"partner":
+	{
+	  "id":"172",
+	  "name":"Viaggiare Rent",
+	  "logo":null,
+	  "namespace":null
+	},
+"res_partner":
+	{
+	  "id":"5ad2015a-adf6-4758-a63d-8b077ee09aff",
+	  "name":"Viaggiare Rent",
+	  "logo":"https:\/\/cdn-partner.tinoleggio.it\/partners\/f015f0fb70143d02732c20ccc0b3ea07.png",
+	  "rate":
+		{
+		  "avg":0,
+		  "n":0
+		}
+	},
+"pick_up_center":
+        {
+	  "location_id":"07507276-0ae0-40e9-9b58-689bf021d828",
+	  "address":"SP44 KM 4.5 SNC",
+	  "at_airport":false,
+	  "at_station":"false",
+	  "email":null,
+	  "lat":40.630808,
+	  "long":8.29601,
+	  "phone":"(+39) 3486274297, (+39) 0424\/1958079",
+	  "note":"a:4:{s:14:\"alternate_name\";s:3:\"AHO\";s:8:\"terminal\";N;s:12:\"instructions\";s:406:\"Servizio navetta: Quando arrivate nell'area Arrivi, chiamare il numero (+39) 3486274297 per il servizio navetta, il punto di incontro \u00e8 fuori dal Terminal Arrivi. L'ufficio dista 1 km dall'aeroporto. \/\/ Shuttle Service Available. Please, when in the Arrival Area, call the number: (+39) 3486274297 for the shuttle service, \"Meeting Point\" is outside of Arrival Area. The office is near the airport (1 km).\";s:13:\"location_type\";s:14:\"FREESHUTTLEBUS\";}",
+	  "city_id":"142052"
+	},
+"drop_off_center":
+	{
+	  "location_id":"07507276-0ae0-40e9-9b58-689bf021d828",
+	  "address":"SP44 KM 4.5 SNC",
+	  "at_airport":false,
+	  "at_station":"false",
+	  "email":null,
+	  "lat":40.630808,
+	  "long":8.29601,
+	  "phone":"(+39) 3486274297, (+39) 0424\/1958079",
+	  "note":"a:4:{s:14:\"alternate_name\";s:3:\"AHO\";s:8:\"terminal\";N;s:12:\"instructions\";s:406:\"Servizio navetta: Quando arrivate nell'area Arrivi, chiamare il numero (+39) 3486274297 per il servizio navetta, il punto di incontro \u00e8 fuori dal Terminal Arrivi. L'ufficio dista 1 km dall'aeroporto. \/\/ Shuttle Service Available. Please, when in the Arrival Area, call the number: (+39) 3486274297 for the shuttle service, \"Meeting Point\" is outside of Arrival Area. The office is near the airport (1 km).\";s:13:\"location_type\";s:14:\"FREESHUTTLEBUS\";}","city_id":"142052"},
+	  "extras":[],
+	  "services":[],
+	  "prices":[
+		{
+		  "price":70.01,
+		  "base_price":70.01,
+		  "pre_discount_price":71.81,
+		  "base_pre_discount_price":71.81,
+		  "advance":70.01,
+		  "base_advance":70.01,
+		  "commission":10.17,
+		  "code":"7054e57306d0dbbd73501b60625cd6be",
+		  "km_included":9999,
+		  "km_extra_price":0,
+		  "rental_day":1,
+		  "upgrade_price":false,
+		  "included":
+			{
+			  "extra":[],
+			  "services":[],
+			  "insurance":[]
+			},
+		  "currency":"EUR",
+		  "base_currency":"EUR",
+		  "base_advance_currency":"EUR",
+		  "base_pre_discount_currency":"EUR",
+		  "deposit_price":800,
+		  "deposit_currency":"EUR",
+		  "pre_deposit_currency":"EUR",
+		  "description":"",
+		  "search_param":
+			{
+			  "search_id":"f4b1cf983263ef0acb2ebd459119d0f560cb4c08e44982.20424569",
+			  "vehicle_id":"54c48a030801952b162a7c1e3ffe5020",
+                          "rate_id":"7054e57306d0dbbd73501b60625cd6be"
+			}
+		 }
+	  ],
+	  "driver_info":
+		{
+		  "age":30,
+		  "country":"IT"
+		},
+	  "extra_info":
+		{
+		  "on_request":false,
+		  "delivered":false,
+		  "fuel_policy":1,
+		  "insurance_type":"internal",
+		  "payment_class":"rooster",
+		  "credit_card":true,
+		  "external_insurance":true,
+		  "search_param":
+			{
+			  "search_id":"f4b1cf983263ef0acb2ebd459119d0f560cb4c08e44982.20424569",
+			  "vehicle_id":"54c48a030801952b162a7c1e3ffe5020",
+			  "rate_id":"7054e57306d0dbbd73501b60625cd6be"
+			},
+		  "partner":
+			{
+			  "id":"172",
+			  "name":"Viaggiare Rent",
+			  "code":null
+			},
+		  "location_type":"FREESHUTTLEBUS",
+		  "rental_informations":[],
+		  "cancellation_policies":[],
+		  "payment_info":[],
+		  "rate_qualifier":"prepaid",
+		  "partner_payment":false,
+		  "category_group":"mini",
+		  "model_guaranteed":false,
+		  "cards_accepted":[
+				{
+				  "card":"CREDITCARD",
+				  "card_code":"VISA",
+				  "issuer":null
+				},
+				{
+				  "card":"CREDITCARD",
+				  "card_code":"MASTERCARD",
+				  "issuer":null
+				}
+		  ],
+		  "opening_hours":[]
+		},
+	  "insurance":[],
+	  "rental_terms":[],
+	  "highlight":"509979d46a41632c0df057fca197cb8d",
+	  "included_highlight":[]
+	}
+
+
+
+NOTE:
+ci sono due "enum" che vengono così tradotti graficamente:
+- fuel_policy
+        1: pieno / pieno
+        2: prepagato
+        3: prepagato (rimborsabile)
+        4: pieno omaggio
+        5: non definito
+- location_type
+       *: stampa dell'indirizzo del centro noleggio di presa (pick_up_center)
+       interminal: frase statica "Centro noleggio all'interno dell'aeroporto"
+       rentalcenterarea: frase statica "Centro noleggio nell'area autonoleggi"
+- In caso possa servire la pagina che ha generato il json allegato è la seguente:
+https://www.tinoleggio.it/risultati/auto/Italia/Sardegna/Alghero%20Aeroporto%20Fertilia%20(AHO)/21-07-2021_10:00/Italia/Sardegna/Alghero%20Aeroporto%20Fertilia%20(AHO)/22-07-2021_10:00/IT_30_1
+
+
+
+CONTATTI:
+Naturalmente per ogni dubbio, curiosità, approfondimento sentiti libero di scrivere.
+Igor Scabini
+CTO
+TiNoleggio S.r.l.
+Via G. e C. Venini 24, Milano, 20127, Italia
+Tel: +39 02 4070 1880
+i.scabini@tinoleggio.it | http://tinolegg.io

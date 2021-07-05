@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- GoogleFonts -->
+    <!-- roboto / cutive mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+    <!-- /GoogleFonts -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- Fontawesome -->
+    <!-- VueJs -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- /VueJs -->
+    <!-- Botstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- /Botstrap -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- /css -->
+
+
+    <title>TiNoleggio</title>
+  </head>
+  <body>
+    <div id="root">
+        <!-- wrapper -->
+        <div class="wrapper">
+          <!-- card -->
+          <div class="card border" v-for="item in response">
+            <!-- card section top -->
+            <div class="card_top">
+              <!-- card section top description -->
+              <div class="top_left col-md-8">
+                <div class="left_summary col-md-6">
+                  <h2 class="uppercase bold big_text color_primary">{{item.article.name}} <span class="lowercase light med_text color_secondary">o similare</span></h2>
+                  <div class="image_vehicle" v-for="image in item.article.images">
+                    <img :src="image" :alt="item.article.name">
+                  </div> 
+                  <div class="type_vehicle background_primary_special border_radius">
+                    <i class="fas fa-car color_white"></i>
+                    <span class="uppercase color_white small_text">{{item.extra_info.category_group}}</span>
+                  </div>
+                  <div class="position_vehicle">
+                    <i class="fas fa-map-marker-alt color_primary"></i>
+                    <span class="uppercase medium italic small_text color_secondary">{{item.pick_up_center.address}}</span>
+                  </div>
+                  <div class="partner_vehicle">
+                    <div class="partner_image col-sm-6">
+                      <img :src="item.res_partner.logo" :alt="item.res_partner.name">
+                    </div>
+                    <div class="partner_rating col-sm6">
+                      <span class="med_text color_secondary">Valutazione media:</span><br>
+                      <div class="rating_value">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span class="medium_text color_primary">7.0/10</span>
+                      </div>
+                    </div>
+                  </div>               
+                </div>
+                <div class="left_specifications col-md-6">
+                  <div class="contact">
+                    <div class="pointer">
+                      <i class="fas fa-info color_primary"></i>
+                    </div>
+                    <div class="pointer">
+                      <i class="fas fa-envelope color_primary"></i>
+                    </div>
+                  </div>
+                  <div class="details_vehicle">
+                    <div class="detail">
+                      <div class="border_bottom">
+                        <i class="far fa-square color_primary"></i>
+                        <span  class="med_text color_secondary">Manuale</span>
+                      </div>
+                      <div class="border_bottom">
+                        <i class="far fa-square color_primary"></i>
+                        <span class="med_text color_secondary">3 Porte</span>
+                      </div>
+                      <div class="border_bottom">
+                        <i class="far fa-square color_primary"></i>
+                        <span class="med_text color_secondary">4 Posti</span>
+                      </div>
+                      <div class="border_bottom">
+                        <i class="far fa-square color_primary"></i>
+                        <span class="med_text color_secondary">Benzina</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fuel_vehicle">
+                    <i class="fas fa-gas-pump color_primary"></i>
+                    <span class="medium small_text color_secondary">
+                      Ritiro con serbatoio <span class="bold">{{translationFuel}}</span><br>
+                      Consegna <span class="bold">{{translationFuel}}</span>
+                    </span>
+                  </div>   
+                </div>
+              </div>
+              <!-- /card section top description -->
+              <!-- card section top select -->
+              <div class="top_right col-md-4">
+                <div class="km_image">
+                  <img src="img/km.png" alt="km">
+                </div>
+                <div class="price" v-for="price in item.prices">
+                  <h1 class="bold color_primary">{{price.price}} €</h1>
+                  <div class="uppercase bold medium_text color_primary">prepagato online</div>
+                  <div class="med_text color_secondary">Tariffa Finale IVA inc.</div>
+                </div>
+                <div class="button bold big_text color_white border_radius">SELEZIONA</div>
+                  
+              </div>
+              <!-- /card section top select -->
+            </div>
+            <!-- /card section top -->
+            <!-- card section top small device -->
+            <div class="card_top_small">
+              <div class="small_left">
+                <div>
+                  <h2 class="uppercase bold big_text color_primary">{{item.article.name}} <span class="lowercase light med_text color_secondary">o similare</span></h2>
+                </div>
+                <div class="color_primary">
+                  <i class="far fa-square"></i>
+                  <span  class="med_text">Manuale</span>
+                </div>
+                <div class="color_primary">
+                  <i class="far fa-square"></i>
+                  <span class="med_text">4 Posti</span>
+                </div>
+                <div class="color_primary">
+                  <i class="fas fa-gas-pump"></i>
+                  <span class="med_text">Benzina</span>
+                </div>
+                <div class="color_primary">
+                  <i class="far fa-square"></i>
+                  <span class="med_text">Km illimitati</span>
+                </div>
+                <div class="color_primary">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="uppercase small_text">{{item.pick_up_center.address}}</span>
+                </div>
+              </div>
+              <div class="small_right">
+                <div v-for="image in item.article.images">
+                  <img :src="image" :alt="item.article.name">
+                </div>
+                <div class="rating_value">
+                  <span class="med_text color_primary">7.0/10</span>
+                  <i class="fas fa-star small_text"></i>
+                </div>
+                <div class="price_partner">
+                  <div class="partner">
+                    <img :src="item.res_partner.logo" :alt="item.res_partner.name">
+                  </div>
+                  <div class="price background_primary" v-for="price in item.prices">
+                    <span class="bold color_white">{{price.price}} €</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card section top small device -->
+            <!-- card section bottom -->
+            <div class="card_bottom border_top">
+              <div class="bottom_left col-md-6 col-sm-12 col-xs-12" v-for="price in item.prices">
+                <span class="uppercase color_primary small_text medium">Deposito cauzionale rimborsabile: <span class="bold med_text">{{price.deposit_price}}€</span></span>
+              </div> 
+              <div class="bottom_right col-md-6 col-sm-12 col-xs-12">
+                <div class="credit">
+                  <span class="tag background_primary_300 color_white small_text">CREDIT</span>
+                </div>
+                <div v-for="creditcard in item.extra_info.cards_accepted">
+                  <i class="fas fa-credit-card tag color_primary_300 background_primary_100">  {{creditcard.card_code}}</i>
+                </div>
+              </div>
+            </div>
+            <!-- /card section bottom -->
+          </div>  
+          <!-- /card -->
+        </div>
+        <!-- /wrapper -->
+    </div>
+
+    <!-- scriptJS -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- /scriptJS -->
+  </body>
+</html>
