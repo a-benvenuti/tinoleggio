@@ -23,8 +23,6 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- /css -->
-
-
     <title>TiNoleggio</title>
   </head>
   <body>
@@ -116,8 +114,7 @@
                   <div class="uppercase bold medium_text color_primary">prepagato online</div>
                   <div class="med_text color_secondary">Tariffa Finale IVA inc.</div>
                 </div>
-                <div class="button bold big_text color_white border_radius">SELEZIONA</div>
-                  
+                <div class="button bold big_text color_white border_radius">SELEZIONA</div>           
               </div>
               <!-- /card section top select -->
             </div>
@@ -170,14 +167,14 @@
             <!-- /card section top small device -->
             <!-- card section bottom -->
             <div class="card_bottom border_top">
-              <div class="bottom_left col-md-6 col-sm-12 col-xs-12" v-for="price in item.prices">
+              <div class="bottom_left col-md-5 col-sm-12 col-xs-12" v-for="price in item.prices">
                 <span class="uppercase color_primary small_text medium">Deposito cauzionale rimborsabile: <span class="bold med_text">{{price.deposit_price}}€</span></span>
               </div> 
-              <div class="bottom_right col-md-6 col-sm-12 col-xs-12">
-                <div class="credit">
+              <div class="credit col-md-1">
                   <span class="tag background_primary_300 color_white small_text">CREDIT</span>
-                </div>
-                <div v-for="creditcard in item.extra_info.cards_accepted">
+              </div>
+              <div class="bottom_right col-md-6 col-sm-12 col-xs-12">
+                <div class="creditcard" v-for="creditcard in item.extra_info.cards_accepted">
                   <i class="fas fa-credit-card tag color_primary_300 background_primary_100">  {{creditcard.card_code}}</i>
                 </div>
               </div>
